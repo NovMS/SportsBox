@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<title>SportsBox</title>
+<link rel="shortcut icon" href="images/index_icon.ico" type="image/ico">
+<!-- CSS  -->
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css">
+<!-- JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<!-- Скрипт отправки -->
+<script>
+    function AjaxFormRequest(result_id,formMain,url) {
+                jQuery.ajax({
+                    url:     url,
+                    type:     "POST",
+                    dataType: "html",
+                    data: jQuery("#"+formMain).serialize(), 
+                    success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                document.getElementById(result_id).innerHTML = "<p>Возникла ошибка. Попробуйте еще раз</p>";
+                }
+             });
+
+             $(':input','#formMain')
+ 				.not(':button, :submit, :reset, :hidden')
+ 				.val('')
+ 				.removeAttr('checked')
+ 				.removeAttr('selected');
+    }
+</script>
+<!-- Скрипт отправки 2 -->
+<script>
+    function AjaxFormRequest_foot(result_id,formMain_foot,url) {
+                jQuery.ajax({
+                    url:     url,
+                    type:     "POST",
+                    dataType: "html",
+                    data: jQuery("#"+formMain_foot).serialize(), 
+                    success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                document.getElementById(result_id).innerHTML = "<p>Возникла ошибка. Попробуйте еще раз</p>";
+                }
+             });
+
+             $(':input','#formMain_foot')
+ 				.not(':button, :submit, :reset, :hidden')
+ 				.val('')
+ 				.removeAttr('checked')
+ 				.removeAttr('selected');
+    }
+</script>
+</head>
+
+<body>
+    <div class="bod">
+        <header>
+            <div class="head">
+                <img class="logo_header" src="images/logo_header.png" alt="SportsBox">
+                <div class="kont1">
+                    <p><img src="images/phone.png" alt="">8(951)199-19-11</p>
+                    <p><img src="images/mail.png" alt="">sportsbox@bk.ru</p>
+                </div>
+                <div class="kont2">
+                    <a href=""><p><img src="images/vk.png" alt="">vk.com</p></a>
+                    <a href=""><p><img src="images/inst.png" alt="">sportsbox</p></a>
+                </div>
+                <div class="right_head">
+                    <a href=""><p>Подобрать набор</p></a>
+                </div>
+            </div>
+        </header>
+        
+        <section class="paral" data-speed="10" data-type="background">
+                <article class="name">
+                    <h1>SPORTS BOX</h1>
+                    <h2>&#9658; Набор собранный профессионалами</h2>
+                    <h2>&#9658; Оригинальное спортивное питание<br>от ведущих мировых производителей</h2>
+                    <h2>&#9658; Уверенность в результате</h2>
+                    <h2>&#9658; Мотивация в достижении своей цели</h2>
+                    <h2>&#9658; Экономия времени и денег</h2>
+                    <h2>&#9658; Бесплатная доставка по Москве</h2>
+                </article>
+        </section>
+        <section class="about">
+            <div class="left_and_right_about">
+                <div class="left_about">
+                    <img src="images/ab.png" alt="">
+                </div>
+                <div class="block_r">
+                    <!-- 0 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <h2>Наборы спортивного питания для любой цели</h2>
+                        </div>
+                    </div>
+                    <!-- 1 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <div class="right_about_block_img"><img src="images/ok.png" alt=""></div>
+                            <div class="right_about_block_p"><p>Увеличение массы и силы</p></div>
+                        </div>
+                    </div>
+                    <!-- 2 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <div class="right_about_block_img"><img src="images/ok.png" alt=""></div>
+                            <div class="right_about_block_p"><p>Снижение веса</p></div>
+                        </div>
+                    </div>
+                    <!-- 3 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <div class="right_about_block_img"><img src="images/ok.png" alt=""></div>
+                            <div class="right_about_block_p"><p>Энергия и выносливость</p></div>
+                        </div>
+                    </div>
+                    <!-- 4 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <div class="right_about_block_img"><img src="images/ok.png" alt=""></div>
+                            <div class="right_about_block_p"><p>Укрепление здоровья</p></div>
+                        </div>
+                    </div>
+                    <!-- 5 блок -->
+                    <div class="right_about">
+                        <div class="right_about_block">
+                            <div class="right_about_block_img"><img src="images/ok.png" alt=""></div>
+                            <div class="right_about_block_p"><p>Улучшение восстановления после тренировки</p></div>
+                        </div>
+                    </div>
+                	<!-- Сделать заказ -->
+                    <div class="right_about_but">
+                        <a href="">Подобрать набор</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="rules">
+        	<div class="rul_blocks clearfix">
+            	<div class="rul_block">
+                	<img src="images/1sta.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/lin.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/2sta.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/lin.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/3sta.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/lin.png" alt="">
+                </div>
+                <div class="rul_block">
+                	<img src="images/4sta.png" alt="">
+                </div>
+            </div>
+            <div class="rul_blocks_p clearfix">
+                <div class="rul_block_p">
+                    <p>Заполняете анкету</p>
+                </div>
+                <div class="rul_block_p">
+                    <p>Мы собираем самый подходящий для вас набор в течение одного дня</p>
+                </div>  
+                <div class="rul_block_p">
+                    <p>Подробное описание набора приходит к вам на почту</p>
+                </div>  
+                <div class="rul_block_p">
+                    <p>После подтверждения заказа мы бесплатно доставляем вам набор</p>
+                </div>  
+            </div>
+            <div class="dop_rul">
+                <p>&#9658; После приобретения набора вы можете заказать любой товар из него по специальной цене</p>
+                <p>&#9658; Вы можете заказать набор в любой город. Доставка будет осуществляться Почтой России</p>
+            </div>
+        </section>
+        
+        <section class="pop">
+            <div class="main_pop">
+                <div class="pop_h1"><h1>Готовые наборы</h1></div>
+            
+                <div class="blocks">
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                                <h3>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом. Данный бокс нерекомендован людям с избыточным весом</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                            </div>
+                            <p>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                            </div>
+                            <p>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                            </div>
+                            <p>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                            </div>
+                            <p>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом</p>
+                        </div>
+                    </div>
+                    <div class="block">
+                    	<div class="block_script">
+                            <div class="block_ss">
+                                <a href="images/infnabor.jpg"><h2>Набор "Хороший старт"</h2>
+                                <div class="block_img"><img src="images/tovar.png" alt=""></div></a>
+                            </div>
+                            <p>Бокс отлично подойдет для тех, кто хочет начать пить спортпит, но не знает с чего начать. Данный бокс нерекомендован людям с избыточным весом</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="podp">
+                    <h2>Заказать готовый набор</h2>
+                    <div class="wrapper">
+                        <div class="form">
+                            <div id="messegeResult">
+                                <p>Отправьте свои данные, чтобы наш менеджер связался с вами</p>
+                            </div>
+                
+                            <form method="post" action="" id="formMain" name="formMain">
+                                <input id="name" type="text" name="name" placeholder="Название набора" maxlength="30" autocomplete="off" required/>
+                                <input id="tel" type="tel" name="tel" placeholder="Номер телефона*" maxlength="30" autocomplete="off" required/>
+                                <input id="button" type="button"  value="Заказать" onclick="AjaxFormRequest('messegeResult', 'formMain', 'php/form.php')"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="footer">
+    	<div class="clearfix">
+            <div class="about_foot">
+                <h2>О нас</h2>
+                <p>Sports Box - интернет-магазин спортивного питания для любой цели.<br>Мы не просто продаем спортивное питание, но и помогаем подобрать для вас самый подходящий набор из него, с которым вы обязательно добьетесь желаемых результатов.</p>
+            </div>
+                <div class="podp_foot">
+                    <h2>Новости Sports Box</h2>
+                    <div class="wrapper_foot">
+                        <div class="form_foot">
+                            <div id="messegeResult_foot">
+                                <p>Все пропустят, а Вы подпишитесь и будьте в курсе акций и новых поступлений</p>
+                            </div>
+                
+                            <form method="post" action="" id="formMain_foot" name="formMain_foot">
+                                <input id="email_foot" type="email" name="email" placeholder="Email*" maxlength="50" autocomplete="off" required/><br>
+                                <input id="button_foot" type="button"  value="Подписаться" onclick="AjaxFormRequest_foot('messegeResult_foot', 'formMain_foot', 'php/form_foot.php')"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <div class="kont_foot">
+                <h2>Контакты</h2>
+                <p>Офис: г.Москва, ул.Миклухо-Маклая, д.19</p>
+                <p>email: sports-box@bk.ru</p>
+                <div class="tel_foot"><p>тел. 8(951)199-19-11</p></div>
+                <div class="img_foot">
+                    <img src="images/vk.png" alt="">
+                    <img src="images/inst.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="cr"><p>Copyright © 2017 SportsBox</p></div>
+    </section>
+    
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+	function setEqualHeight(columns) { 
+		var tallestcolumn = 0; 
+		columns.each( function() { 
+			currentHeight = $(this).height(); 
+			if(currentHeight > tallestcolumn) { tallestcolumn = currentHeight; } } ); 
+			columns.height(tallestcolumn); 
+		} 
+		
+		$(document).ready(function() { setEqualHeight($(".block_script")); });
+</script>
+</body>
+</html>

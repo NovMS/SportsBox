@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SportsBox</title>
+<link rel="shortcut icon" href="images/index_icon.ico" type="image/ico">
+<link href="css/style_form_pop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section class="podp">
+            <h2>Новости SportsBox</h2>
+            <div class="wrapper">
+                <div class="form">
+                    <div id="messegeResult">
+                        <p>Подпишитесь и будьте в курсе новых поступлений и акций</p>
+                    </div>
+        
+                    <form method="post" action="" id="formMain" name="formMain">
+                        <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/><br>
+                        <input id="email" type="email" name="email" placeholder="Введите ваш email" maxlength="30" autocomplete="off" required/><br>
+                        <input id="button" type="button"  value="Подписаться" onclick="AjaxFormRequest('messegeResult', 'formMain', 'php/form.php')"/>
+                    </form>
+                </div>
+            </div>
+            <div class="cr"><p>Copyright © 2017 SportsBox</p></div>
+        </section>
+</body>
+</html>
